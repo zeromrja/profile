@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Ejemplo de perfil</title>
+  <title>Perfil de usuario</title>
 </head>
 <body>
   <h1>Cargando perfil...</h1>
@@ -21,6 +21,7 @@
         })
         .then(data => {
           document.querySelector('h1').textContent = `Perfil de ${data.gamertag}`;
+          // Aquí puedes poner más info con data que recibas
         })
         .catch(err => {
           document.querySelector('h1').textContent = 'Error cargando perfil: ' + err.message;
