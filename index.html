@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de perfil</title>
+</head>
+<body>
+  <script>
+const params = new URLSearchParams(window.location.search);
+const gamertag = params.get("gamertag");
+
+fetch(`https://piranha-boss-virtually.ngrok-free.app/profile/${encodeURIComponent(gamertag)}`)
+  .then(res => res.json())
+  .then(data => {
+    // muestra los datos
+    document.querySelector('h1').textContent = `Perfil de ${data.gamertag}`;
+  });
+
+  </script>
+</body>
+</html>
