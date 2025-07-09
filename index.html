@@ -14,7 +14,7 @@
     if (!gamertag) {
       document.querySelector('h1').textContent = 'No se especificó gamertag en la URL.';
     } else {
-      fetch(`https://piranha-boss-virtually.ngrok-free.app/profile/${encodeURIComponent(gamertag)}`)
+      fetch(`https://piranha-boss-virtually.ngrok-free.app/profile/${encodeURIComponent(gamertag)}/json`)
         .then(res => {
           if (!res.ok) throw new Error('Error al obtener perfil');
           return res.json();
